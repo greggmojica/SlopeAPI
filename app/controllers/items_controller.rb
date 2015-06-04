@@ -1,10 +1,6 @@
 class ItemsController < ApplicationController
 
-    def api
-     @items = Item.all
-     
-    render json: Item.all
-  end
+
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
@@ -13,6 +9,12 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     #render json: Item.all
+
+      def api
+       @items = Item.all
+       render json: Item.all
+    end
+    
   end
 
 
@@ -29,6 +31,9 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
   end
+
+
+
 
   # POST /items
   # POST /items.json
