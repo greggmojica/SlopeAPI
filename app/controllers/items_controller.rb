@@ -8,13 +8,13 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
-    #render json: Item.all
+    render json: Item.all
 
-      def api
-       @items = Item.all
-       render json: Item.all
-    end
-    
+    #   def api
+    #    @items = Item.all
+    #    render json: Item.all
+    # end
+
   end
 
 
